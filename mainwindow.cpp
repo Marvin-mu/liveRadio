@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("草莓红播");
+
 }
 
 MainWindow::~MainWindow()
