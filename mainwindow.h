@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include <QTcpSocket>
+#include "clientsocket.h"
+#include "user.h"
+#include "roomlistwindow.h"
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,7 +20,17 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_btn_regist_clicked();                               //注册按钮
+    void on_btn_login_clicked();                                //登录按钮
+    void onError(QAbstractSocket::SocketError socketError);     //网络链接错误信息
+    void onSigReg(user_t user);                                 //注册
+    void onSigLogin(user_t user);                               //登录
+
 private:
     Ui::MainWindow *ui;
+    QTcpSocket *socket;
+    ClientSocket *cs;
+    RoomListWindow *roomWindow;
 };
 #endif // MAINWINDOW_H
