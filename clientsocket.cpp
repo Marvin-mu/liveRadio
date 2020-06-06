@@ -28,9 +28,10 @@ void ClientSocket::onReadyRead()
             emit sigChatText(user);
             break;
         case EXIT:
-            emit sigMasterExit(user);
+            emit sigMasterQuit(user);
             break;
         default:break;
         }
     }
 }
+
