@@ -4,12 +4,13 @@
 #include <QWidget>
 #include "clientsocket.h"
 #include "user.h"
+#include "BaseWindow.h"
 
 namespace Ui {
 class RoomListWindow;
 }
 
-class RoomListWindow : public QWidget
+class RoomListWindow : public BaseWindow
 {
     Q_OBJECT
 

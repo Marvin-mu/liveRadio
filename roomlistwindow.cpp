@@ -2,7 +2,7 @@
 #include "ui_roomlistwindow.h"
 
 RoomListWindow::RoomListWindow(ClientSocket *cs, QTcpSocket *socket, user_t user, QWidget *parent) :
-    QWidget(parent),
+    BaseWindow(parent),
     ui(new Ui::RoomListWindow)
 {
     ui->setupUi(this);

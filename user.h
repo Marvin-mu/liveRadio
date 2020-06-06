@@ -2,8 +2,9 @@
 #define USER_H
 
 enum Flag{
-    UP, //登录状态（用户）
-    MASTER //开播状态
+    DOWN,       //离线,0
+    UP,         //登录状态
+    MASTER      //开播状态
 };
 
 enum type{
@@ -20,11 +21,11 @@ enum type{
 
 typedef struct
 {
-    int type;   //类型
-    int flag;   //状态标志位：0:用户；1：主播；
+    int type;           //类型
+    int flag;           //状态标志位：0:用户；1：主播；
     char username[20];  //用户名
-    char password[20];    //密码
-    char roomName[20];      //聊天室名称
+    char password[20];  //密码
+    char roomName[20];  //聊天室名称
     char data[1024];    //数据
 
 }user_t;
