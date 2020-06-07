@@ -35,14 +35,11 @@ MainWindow::MainWindow(QWidget *parent)
     //连接登录和注册
     connect(cs, SIGNAL(sigReg(user_t)), this, SLOT(onSigReg(user_t)));
     connect(cs, SIGNAL(sigLogin(user_t)), this, SLOT(onSigLogin(user_t)));
-    //connect(cs, SIGNAL((sigRoomList(user_t))), this, SLOT(onSigRoomList(user_t))); //连接在线房间
 
     cs->moveToThread(th);//子线程处理读取服务器数据包任务
     th->start();
     //连接服务器
     socket->connectToHost(QHostAddress::LocalHost,8888);
-
-    onRoomList();
 
 }
 
@@ -127,6 +124,7 @@ void MainWindow::onSigLogin(user_t user)
             QMessageBox::information(this, "发生了故障","请重新登录或者重启应用");
             return;
         }
+        onRoomList();                                           //登录成功请求在线列表
         roomWindow->setWindowTitle(title);
         this->hide();                                           //隐藏登录界面
         roomWindow->show();                                     //显示主界面

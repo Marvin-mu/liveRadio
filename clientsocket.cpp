@@ -27,7 +27,7 @@ void ClientSocket::onReadyRead()
         case TEXT:
             emit sigChatText(user);
             break;
-        case EXIT:
+        case QUIT:
             emit sigMasterQuit(user);
             break;
         default:break;

@@ -4,5 +4,16 @@
         <file>MyTitle/max.png</file>
         <file>MyTitle/min.png</file>
         <file>MyTitle/restore.png</file>
+        <file>image/user/user1.jpg</file>
+        <file>image/user/user2.jpg</file>
+        <file>image/user/user3.jpg</file>
+        <file>image/user/user4.jpg</file>
+        <file>image/camera.png</file>
+        <file>image/mainbk.jpg</file>
+        <file>image/mic.png</file>
+        <file>image/room1.jpg</file>
+        <file>image/room2.jpg</file>
+        <file>image/user.jpg</file>
+        <file>image/refresh.png</file>
     </qresource>
 </RCC>

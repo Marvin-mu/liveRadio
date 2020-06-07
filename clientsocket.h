@@ -18,7 +18,6 @@ signals:
     void sigLogin(user_t user);         //登录
     void sigRoomName(user_t user);      //开播上传房间名
     void sigRoomList(user_t user);      //房间列表
-    void sigExit(user_t user);
     void sigChatText(user_t user);      //文字聊天
     void sigMasterQuit(user_t user);    //关闭房间
 
