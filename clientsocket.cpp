@@ -24,6 +24,9 @@ void ClientSocket::onReadyRead()
         case ROOMLIST:
             emit sigRoomList(user);//刷新
             break;
+        case JOINROOM:
+            emit sigJoinRoom(user);//刷新
+            break;
         case TEXT:
             emit sigChatText(user);
             break;

@@ -26,7 +26,7 @@ private slots:
     void onError(QAbstractSocket::SocketError socketError);     //网络链接错误信息
     void onSigReg(user_t user);                                 //注册
     void onSigLogin(user_t user);                               //登录
-    void onRoomList();                            //获取在线列表
+    void onRoomList();                                          //获取在线房间列表
 
 private:
     Ui::MainWindow *ui;

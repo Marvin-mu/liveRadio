@@ -12,18 +12,20 @@ RoomListWindow::RoomListWindow(ClientSocket *cs, QTcpSocket *socket, user_t user
     this->myinfo = user;
     this->socket = socket;
 
-    pushRoomList();//构造第二界面就请求房间列表
+//    pushRoomList();//构造第二界面就请求房间列表
 
     connect(cs, SIGNAL(sigRoomList(user_t)), this, SLOT(on_roomlist(user_t)));
 }
-
+/*
 void RoomListWindow::pushRoomList()
 {
     user_t user;
     user.type = ROOMLIST;
+    user.flag = UP;     //标记用户在线标志
     socket->write((char*)&user,sizeof (user_t));
     qDebug() << __FUNCTION__ << __LINE__;
 }
+*/
 
 RoomListWindow::~RoomListWindow()
 {
@@ -35,6 +37,8 @@ void RoomListWindow::closeEvent(QCloseEvent *)
 {
     myinfo.type = EXIT;
     socket->write((char*)&myinfo, sizeof(myinfo));//默认会自动发送一次
+    static int i;
+    qDebug() << __FUNCTION__ << i;
 }
 
 //请求在线房间列表
@@ -58,6 +62,7 @@ void RoomListWindow::on_roomlist(user_t user)
     }
 }
 
+//开播时执行添加在线房间操作
 void RoomListWindow::on_roomname(user_t user)
 {
     QString room = QString::fromLocal8Bit(user.roomName);
@@ -65,6 +70,16 @@ void RoomListWindow::on_roomname(user_t user)
     ui->listWidget_roomlist->addItem(item);
 }
 
+//处理服务器发送过来的房间新用户
+void RoomListWindow::on_joinroom(user_t user)
+{
+    //处理房间用户列表
+    QString username = QString::fromLocal8Bit(user.username);
+    QListWidgetItem *item = new QListWidgetItem(username, ui->listWidget_roomlist);
+    ui->listWidget_roomlist->addItem(item);
+}
+
+//处理主播关播
 void RoomListWindow::on_roomquit(user_t user)
 {
     QString str = QString::fromLocal8Bit(user.data);
@@ -72,6 +87,7 @@ void RoomListWindow::on_roomquit(user_t user)
     ui->listWidget_roomuser->clear();
 }
 
+//隐藏房间列表
 void RoomListWindow::on_commandLinkButton_toggled(bool checked)
 {
     if (checked) {
@@ -138,7 +154,6 @@ void RoomListWindow::on_listWidget_roomlist_itemDoubleClicked(QListWidgetItem *i
     socket->write((char*)&myinfo, sizeof (user_t));//更新用户所处的放间
 
     ui->label_roomname->setText(roomname);
-    roomusers.push_back(myinfo.username);
     QListWidgetItem *item1 = new QListWidgetItem(myinfo.username, ui->listWidget_roomuser);
     ui->listWidget_roomlist->addItem(item1);
 }

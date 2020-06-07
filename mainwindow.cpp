@@ -97,6 +97,7 @@ void MainWindow::on_btn_login_clicked()
     strncpy(user.password, ppasswd, 20);
     strncpy(myinfo.password, ppasswd, 20);
     user.type = LOGIN;
+    user.flag = UP;
     socket->write((char*)&user,sizeof(user));   //请求登录的用户信息发送给服务器
 }
 void MainWindow::onSigReg(user_t user)
@@ -112,7 +113,7 @@ void MainWindow::onSigReg(user_t user)
 void MainWindow::onSigLogin(user_t user)
 {
     QString text = user.data;
-    if (text != "登录成功" || user.flag == UP) {
+    if (text != "登录成功") {
         QMessageBox::warning(this, "警告", text);
     } else {
         QMessageBox::information(this, "提示", text);
@@ -133,9 +134,9 @@ void MainWindow::onSigLogin(user_t user)
 
 void MainWindow::onRoomList()
 {
-    //改变用户标志，把房间名发送给服务器
+    //改变用户标志，请求房间列表
     myinfo.type = ROOMLIST;
-    myinfo.type = MASTER;
+    myinfo.flag = UP;
     socket->write((char*)&myinfo, sizeof (user_t));
 
 }

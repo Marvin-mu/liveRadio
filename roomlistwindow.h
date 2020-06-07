@@ -18,7 +18,7 @@ class RoomListWindow : public QWidget
 
 public:
     explicit RoomListWindow(ClientSocket *cs, QTcpSocket *socket, user_t user, QWidget *parent = 0);
-    void pushRoomList();//进入界面请求房间列表
+    //void pushRoomList();//进入界面请求房间列表
     ~RoomListWindow();
 
 protected:
@@ -29,6 +29,7 @@ private slots:
     void on_commandLinkButton_userlist_toggled(bool checked);
     void on_roomlist(user_t);
     void on_roomname(user_t);
+    void on_joinroom(user_t);
     void on_roomquit(user_t);   //关闭房间
     void on_btn_send_clicked();
     void on_btn_live_clicked(bool checked);
@@ -41,7 +42,6 @@ private:
     ClientSocket *cs;
     QTcpSocket *socket;
     user_t myinfo;
-    QVector<QString> roomusers;
 };
 
 #endif // ROOMLISTWINDOW_H
