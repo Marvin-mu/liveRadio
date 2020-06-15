@@ -16,23 +16,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    BaseTitleBar.cpp \
-    BaseWindow.cpp \
+    audiovedio.cpp \
     clientsocket.cpp \
     main.cpp \
     mainwindow.cpp \
-    roomlistwindow.cpp
+    menuwindow.cpp \
+    roomlistwindow.cpp \
+    videosurface.cpp
 
 HEADERS += \
-    BaseTitleBar.h \
-    BaseWindow.h \
+    audiovedio.h \
     clientsocket.h \
     mainwindow.h \
+    menuwindow.h \
     roomlistwindow.h \
-    user.h
+    user.h \
+    videosurface.h
 
 FORMS += \
     mainwindow.ui \
+    menuwindow.ui \
     roomlistwindow.ui
 
 TRANSLATIONS += \
@@ -45,3 +48,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resource.qrc
+
+LIBS += -lDbgHelp

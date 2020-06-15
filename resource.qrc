@@ -9,11 +9,39 @@
         <file>image/user/user3.jpg</file>
         <file>image/user/user4.jpg</file>
         <file>image/camera.png</file>
-        <file>image/mainbk.jpg</file>
         <file>image/mic.png</file>
         <file>image/room1.jpg</file>
         <file>image/room2.jpg</file>
         <file>image/user.jpg</file>
         <file>image/refresh.png</file>
+        <file>image/quit.png</file>
+        <file>image/play.png</file>
+        <file>image/vedio_bk.jpg</file>
+        <file>image/gift.png</file>
+        <file>image/main.jpg</file>
+        <file>image/icon.jpg</file>
+        <file>image/skin1.jpg</file>
+        <file>image/skin2.jpg</file>
+        <file>image/user/user10.jpg</file>
+        <file>image/user/user5.jpg</file>
+        <file>image/user/user6.jpg</file>
+        <file>image/user/user7.jpg</file>
+        <file>image/user/user8.jpg</file>
+        <file>image/user/user9.jpg</file>
+        <file>image/gift/car1.gif</file>
+        <file>image/gift/cheers.gif</file>
+        <file>image/gift/doufeng.gif</file>
+        <file>image/gift/momoda.gif</file>
+        <file>image/gift/rocket.gif</file>
+        <file>image/gift/shuijingqiu.gif</file>
+        <file>image/gift/yanhuagif.gif</file>
+        <file>image/gift/yinghua.gif</file>
+        <file>image/gift/car1.png</file>
+        <file>image/gift/cheers.png</file>
+        <file>image/gift/doufeng.png</file>
+        <file>image/gift/momoda.png</file>
+        <file>image/gift/shuijingqiu.png</file>
+        <file>image/gift/yinghua.png</file>
+        <file>image/set.jpg</file>
     </qresource>
 </RCC>

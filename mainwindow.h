@@ -7,6 +7,7 @@
 #include "user.h"
 #include "roomlistwindow.h"
 #include <QMessageBox>
+#include <QPaintEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,7 +19,10 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void LoadUser();
     ~MainWindow();
+protected:
+    void paintEvent(QPaintEvent *);
 
 private slots:
     void on_btn_regist_clicked();                               //注册按钮
@@ -27,6 +31,8 @@ private slots:
     void onSigReg(user_t user);                                 //注册
     void onSigLogin(user_t user);                               //登录
     void onRoomList();                                          //获取在线房间列表
+
+    void on_checkBox_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;

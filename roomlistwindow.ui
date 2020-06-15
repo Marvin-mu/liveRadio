@@ -2,180 +2,71 @@
 <ui version="4.0">
  <class>RoomListWindow</class>
  <widget class="QWidget" name="RoomListWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1066</width>
-    <height>685</height>
+    <width>1060</width>
+    <height>600</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1060</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1060</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <widget class="QListWidget" name="listWidget_roomlist">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>60</y>
-     <width>151</width>
-     <height>601</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_vedio">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>20</y>
-     <width>711</width>
-     <height>521</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>视频区</string>
-   </property>
-  </widget>
-  <widget class="QCommandLinkButton" name="commandLinkButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>240</y>
-     <width>31</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="layoutDirection">
-    <enum>Qt::RightToLeft</enum>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="checkable">
+   <property name="enabled">
     <bool>true</bool>
    </property>
-  </widget>
-  <widget class="QCommandLinkButton" name="commandLinkButton_userlist">
    <property name="geometry">
     <rect>
-     <x>1030</x>
-     <y>230</y>
-     <width>41</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="description">
-    <string>hide user list</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_camera">
-   <property name="geometry">
-    <rect>
-     <x>790</x>
-     <y>500</y>
-     <width>41</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/image/camera.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_audio">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>500</y>
-     <width>51</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/image/mic.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_input">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>620</y>
-     <width>391</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_send">
-   <property name="geometry">
-    <rect>
-     <x>820</x>
-     <y>620</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>send</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_live">
-   <property name="geometry">
-    <rect>
-     <x>740</x>
-     <y>500</y>
-     <width>41</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="focusPolicy">
-    <enum>Qt::ClickFocus</enum>
-   </property>
-   <property name="text">
-    <string>开播</string>
-   </property>
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QTextBrowser" name="textBrowser_text">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>350</y>
-     <width>256</width>
-     <height>192</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
+     <x>0</x>
      <y>30</y>
-     <width>91</width>
-     <height>31</height>
+     <width>120</width>
+     <height>530</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_onlineroom">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>90</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 255, 255);
+color: rgb(255, 170, 0);</string>
    </property>
    <property name="text">
     <string>在线房间&gt;&gt;&gt;</string>
@@ -184,66 +75,145 @@ color: rgb(0, 0, 0);</string>
   <widget class="QPushButton" name="btn_refresh">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>30</y>
-     <width>31</width>
-     <height>31</height>
+     <x>90</x>
+     <y>0</y>
+     <width>30</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/image/refresh.png);</string>
+    <string notr="true">image: url(:/image/refresh.png)</string>
    </property>
    <property name="text">
     <string/>
    </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="label_roomuser">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>20</y>
-     <width>91</width>
-     <height>31</height>
+     <x>960</x>
+     <y>60</y>
+     <width>100</width>
+     <height>30</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 255, 255);
+color: rgb(255, 170, 0);</string>
    </property>
    <property name="text">
     <string>房间用户&gt;&gt;&gt;</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_bs">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>520</y>
-     <width>61</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>弹幕</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_roomname">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>50</y>
-     <width>72</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>房间名</string>
-   </property>
-  </widget>
   <widget class="QListWidget" name="listWidget_roomuser">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>50</y>
-     <width>91</width>
-     <height>581</height>
+     <x>960</x>
+     <y>90</y>
+     <width>100</width>
+     <height>470</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>0</y>
+     <width>840</width>
+     <height>520</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::CustomContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>0</y>
+     <width>841</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_widget"/>
+  </widget>
+  <widget class="QPushButton" name="btn_live">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>0</y>
+     <width>100</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string> 开播</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_top_up">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>559</y>
+     <width>101</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="text">
+    <string>充值</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_menu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>559</y>
+     <width>42</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="text">
+    <string>menu</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>
